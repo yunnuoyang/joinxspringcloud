@@ -1,6 +1,10 @@
 server:
-  port: 8089
+  port: 8761
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    fetch-registry: false    #eureka默认将本身也当作服务注册，所以开启此声名为false
+    register-with-eureka: false #与上边的配置一同使用
+#    serviceUrl:
+#          defaultZone: http://localhost:8089/eureka/  #注册的url,服务端不配置此参数无妨，主要是第三方服务提供者配置此地址用作服务注册
+
+

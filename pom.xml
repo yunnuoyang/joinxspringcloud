@@ -8,6 +8,7 @@
     <module>rabbitMQ-provider</module>
       <module>springcloud-eureka</module>
     <module>springboot-elasticsearch</module>
+    <module>springcloud-eureka-provider</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
