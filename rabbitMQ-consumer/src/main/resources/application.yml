@@ -1,0 +1,10 @@
+spring:
+  rabbitmq:
+    addresses: 127.0.0.1
+    port: 15672
+    username: guest
+    password: guest
+    listener:
+      retry:
+           enabled: true  #开启重试  解决ack反馈问题
+           max-attempts: 3 #重试次数
