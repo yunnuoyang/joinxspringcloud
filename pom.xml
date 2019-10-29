@@ -9,6 +9,7 @@
       <module>springcloud-eureka</module>
     <module>springboot-elasticsearch</module>
     <module>springcloud-eureka-provider</module>
+    <module>springcloud-eureka-provider-2</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>

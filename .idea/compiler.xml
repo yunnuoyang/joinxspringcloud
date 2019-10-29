@@ -10,6 +10,8 @@
         <module name="rabbitMQprovider" />
         <module name="springbootelasticsearch" />
         <module name="springcloudeureka" />
+        <module name="springcloudeurekaprovider" />
+        <module name="springcloudeurekaprovider2" />
       </profile>
     </annotationProcessing>
   </component>

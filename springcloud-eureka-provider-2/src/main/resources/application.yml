@@ -1,0 +1,13 @@
+
+eureka:
+  instance:
+      prefer-ip-address: true #使用真实ip端口
+     # instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: joinx-03-eurekaprovider
+server:
+  port: 8899
