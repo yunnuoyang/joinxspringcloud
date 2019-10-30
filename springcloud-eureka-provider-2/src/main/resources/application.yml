@@ -10,4 +10,4 @@ spring:
   application:
     name: joinx-03-eurekaprovider
 server:
-  port: 8899
+  port: 8882

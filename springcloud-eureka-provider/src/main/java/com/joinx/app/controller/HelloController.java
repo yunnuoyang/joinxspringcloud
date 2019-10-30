@@ -27,7 +27,7 @@ public class HelloController {
       return this.template.getForObject("http://joinx-03-eurekaprovider/getUser/"+id,User.class);
    }
    
-   @GetMapping("")
+   @GetMapping("/")
    public String loadBalancer(){
       ServiceInstance serviceInstance = this.loadBalancerClient.choose("joinx-03-eurekaprovider");
       String str = serviceInstance.getHost() + ":" + serviceInstance.getPort() + "" + serviceInstance.getUri();

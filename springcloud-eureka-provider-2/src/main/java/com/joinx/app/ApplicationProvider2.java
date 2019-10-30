@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-@RibbonClient(value = "joinx-03-eurekaprovider",configuration = TestRibbonConfiguration.class)
+//@RibbonClient(value = "joinx-03-eurekaprovider",configuration = TestRibbonConfiguration.class)
 public class ApplicationProvider2 {
    public static void main(String[] args) {
       SpringApplication.run(ApplicationProvider2.class,args);
