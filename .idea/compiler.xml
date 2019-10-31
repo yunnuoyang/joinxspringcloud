@@ -12,6 +12,7 @@
         <module name="springcloudeureka" />
         <module name="springcloudeurekaprovider" />
         <module name="springcloudeurekaprovider2" />
+        <module name="springcloudjoinxfeign" />
       </profile>
     </annotationProcessing>
   </component>

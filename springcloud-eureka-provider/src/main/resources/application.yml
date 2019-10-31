@@ -11,3 +11,6 @@ spring:
     name: joinx-01-eurekaprovider
 server:
   port: 8888
+joinx-03-eurekaprovider:
+  ribbon:
+   NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

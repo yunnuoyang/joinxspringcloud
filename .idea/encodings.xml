@@ -8,5 +8,6 @@
     <file url="file://$PROJECT_DIR$/springcloud-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-eureka-provider" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-eureka-provider-2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-joinx-feign" charset="UTF-8" />
   </component>
 </project>

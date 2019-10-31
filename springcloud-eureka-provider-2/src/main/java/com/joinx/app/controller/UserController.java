@@ -1,9 +1,7 @@
 package com.joinx.app.controller;
 
 import com.joinx.app.pojo.User;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class UserController {
@@ -13,6 +11,12 @@ public class UserController {
       User user=new User();
       user.setName("joinx");
       user.setID(1l);
+      return user;
+   }
+   @PostMapping("/addUser")
+   public User addUser(@RequestBody User user){
+      System.out.println(user.getID()+"===="+user.getName());
+   
       return user;
    }
 }

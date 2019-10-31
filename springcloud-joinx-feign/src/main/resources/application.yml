@@ -8,6 +8,6 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 spring:
   application:
-    name: joinx-03-eurekaprovider
+    name: joinx-feign-eurekaprovider
 server:
-  port: 8885
+  port: 8882

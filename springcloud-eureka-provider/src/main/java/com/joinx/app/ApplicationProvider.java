@@ -17,7 +17,8 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableEurekaClient
 //具备负载能力的服务,指定服务名称，使用不同的规则进行负载
-@RibbonClient(value = "joinx-03-eurekaprovider",configuration = MyRuleConfiguration.class)
+//@RibbonClient(value = "joinx-03-eurekaprovider",configuration = MyRuleConfiguration.class)
+@RibbonClient(value = "joinx-03-eurekaprovider",configuration = TestRibbonConfiguration.class)
 public class ApplicationProvider {
    public static void main(String[] args) {
       SpringApplication.run(ApplicationProvider.class,args);
