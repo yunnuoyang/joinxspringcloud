@@ -11,3 +11,6 @@ spring:
     name: joinx-feign-eurekaprovider
 server:
   port: 8882
+logging: #配置feign的日志
+  level:
+    joinx.app.feign.StoreClient2: DEBUG

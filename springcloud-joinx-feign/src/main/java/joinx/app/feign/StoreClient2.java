@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @FeignClient(name = "joinx-03-eurekaprovider",configuration = MyFeignonfiguration.class)
 public interface StoreClient2 {
    @RequestLine(value = "GET /getUser/{id}")
-   public String getUser(@Param("id") long id);//必须绑定参数
+   public User getUser(@Param("id") long id);//必须绑定参数
    
 //   @RequestLine(value = "/addUser")
 //   public User addUser(@RequestBody User user);

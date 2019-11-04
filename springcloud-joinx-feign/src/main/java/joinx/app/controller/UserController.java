@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 public class UserController {
    @Autowired
    private StoreClient2 storeClient;
@@ -20,8 +20,9 @@ public class UserController {
       user.setID(1l);
       return user;
    }
-   @RequestMapping(value = "/feign/{id}",method = RequestMethod.GET)
-   public String feignDemo(@PathVariable long id){
+   @RequestMapping(value = "/feign/{id}")
+   
+   public User feignDemo(@PathVariable long id){
       System.out.println("feignDemo ......"+id);
       return storeClient.getUser(id);
    }

@@ -11,6 +11,8 @@
     <module>springcloud-eureka-provider</module>
     <module>springcloud-eureka-provider-2</module>
     <module>springcloud-joinx-feign</module>
+    <module>springcloud-eureka-provider-hystrix</module>
+    <module>springcloud-eureka-provider-hystrix-propagation</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>

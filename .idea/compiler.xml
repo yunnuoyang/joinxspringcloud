@@ -9,6 +9,8 @@
         <module name="rabbitMQconsumer" />
         <module name="rabbitMQprovider" />
         <module name="springbootelasticsearch" />
+        <module name="springcloud-eureka-provider-hystrix" />
+        <module name="springcloud-eureka-provider-hystrix-propagation" />
         <module name="springcloudeureka" />
         <module name="springcloudeurekaprovider" />
         <module name="springcloudeurekaprovider2" />

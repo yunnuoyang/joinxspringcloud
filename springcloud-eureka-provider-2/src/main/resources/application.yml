@@ -2,7 +2,11 @@
 eureka:
   instance:
       prefer-ip-address: true #使用真实ip端口
-     # instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+      instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+      metadata-map:
+         zone: ABC #eureka可以解析的元数据
+         joinx : bbc #不会影响客户端行为
+      lease-renewal-interval-in-seconds: 20
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
@@ -10,4 +14,24 @@ spring:
   application:
     name: joinx-03-eurekaprovider
 server:
-  port: 8885
+  port: 8883
+#  eureka的高可用配置
+#  ---
+#  spring:
+#    profiles: peer1
+#  eureka:
+#    instance:
+#      hostname: peer1
+#    client:
+#      serviceUrl:
+#        defaultZone: https://peer2/eureka/
+#
+#  ---
+#  spring:
+#    profiles: peer2
+#  eureka:
+#    instance:
+#      hostname: peer2
+#    client:
+#      serviceUrl:
+#        defaultZone: https://peer1/eureka/

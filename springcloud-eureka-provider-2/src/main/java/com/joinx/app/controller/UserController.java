@@ -10,7 +10,7 @@ public class UserController {
       System.out.println("asdfgfhdfgsdfsSDd");
       User user=new User();
       user.setName("joinx");
-      user.setID(1l);
+      user.setID(id);
       return user;
    }
    @PostMapping("/addUser")
