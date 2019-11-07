@@ -10,10 +10,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springcloud-joinx-feign</artifactId>
-    <packaging>jar</packaging>
+    <artifactId>springcloud-joinx-feign-hystrix</artifactId>
+    <packaging>war</packaging>
 
-    <name>springcloud-joinx-feign Maven Webapp</name>
+    <name>springcloud-joinx-feign-hystrix Maven Webapp</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -55,6 +55,10 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>

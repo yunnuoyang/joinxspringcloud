@@ -6,11 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="eureka-server-joinx" />
         <module name="rabbitMQconsumer" />
         <module name="rabbitMQprovider" />
         <module name="springbootelasticsearch" />
+        <module name="springcloud-eureka-hystrix-dashboard" />
         <module name="springcloud-eureka-provider-hystrix" />
         <module name="springcloud-eureka-provider-hystrix-propagation" />
+        <module name="springcloud-hystrix-turbine" />
+        <module name="springcloud-joinx-feign-hystrix" />
         <module name="springcloudeureka" />
         <module name="springcloudeurekaprovider" />
         <module name="springcloudeurekaprovider2" />

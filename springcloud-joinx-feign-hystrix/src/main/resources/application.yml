@@ -1,0 +1,19 @@
+
+eureka:
+  instance:
+      prefer-ip-address: true #使用真实ip端口
+     # instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: joinx-feign-hystrix-eurekaprovider
+server:
+  port: 8882
+logging: #配置feign的日志
+  level:
+    joinx.app.feign.StoreClient2: DEBUG
+feign:  #开启feign对hystrix的支持，默认关闭
+  hystrix:
+    enabled: true

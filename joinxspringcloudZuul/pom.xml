@@ -4,32 +4,20 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <modules>
-    <module>rabbitMQ-consumer</module>
-    <module>rabbitMQ-provider</module>
-    <module>springcloud-eureka</module>
-    <module>springboot-elasticsearch</module>
-    <module>springcloud-eureka-provider</module>
-    <module>springcloud-eureka-provider-2</module>
-    <module>springcloud-joinx-feign</module>
-    <module>springcloud-eureka-provider-hystrix</module>
-    <module>springcloud-eureka-provider-hystrix-propagation</module>
-    <module>springcloud-joinx-feign-hystrix</module>
-    <module>springcloud-eureka-hystrix-dashboard</module>
-    <module>springcloud-hystrix-turbine</module>
-    <module>joinxspringcloudZuul</module>
+    <module>joinxeurekaserver</module>
   </modules>
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.2.0.RELEASE</version>
-    <relativePath/> <!-- lookup parent from repository -->
+    <version>1.5.13.RELEASE</version>
+    <relativePath /> <!-- lookup parent from repository -->
   </parent>
-  <groupId>joinx-springcloud</groupId>
-  <artifactId>joinx-springcloud</artifactId>
+  <groupId>springcloud-Zuul-joinx</groupId>
+  <artifactId>springcloud-Zuul-joinx</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>joinx-springcloud Maven Webapp</name>
+  <name>springcloud-hystrix-joinx Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -39,36 +27,34 @@
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>Dalston.SR5</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <dependencies>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-amqp</artifactId>
+       <groupId>org.springframework.cloud</groupId>
+       <artifactId>spring-cloud-starter-zuul</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <!--<scope>test</scope>-->
-      <exclusions>
-        <exclusion>
-          <groupId>org.junit.vintage</groupId>
-          <artifactId>junit-vintage-engine</artifactId>
-        </exclusion>
-      </exclusions>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-eureka</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.springframework.amqp</groupId>
-      <artifactId>spring-rabbit-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-hystrix</artifactId>
     </dependency>
   </dependencies>
 
   <build>
-    <finalName>joinx-springcloud</finalName>
+    <finalName>springcloud-hystrix-joinx</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
